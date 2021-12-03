@@ -7,7 +7,7 @@ import java.util.Date;
 public class Cita {
 
     private int idCita;
-    private Date fecha;
+    private int fecha;
     private Medico medico; 
     private Paciente paciente; 
 
@@ -19,11 +19,11 @@ public class Cita {
         this.idCita = idCita;
     }
 
-    public Date getFecha() {
+    public int getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(int f) {
         this.fecha = fecha;
     }
 
