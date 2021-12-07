@@ -1,16 +1,16 @@
 
-import java.util.Date;
 /**
  *
- * @author User
+ * @author Lyrisse
  */
 public class Cita {
-
-    private int idCita;
-    private int fecha;
-    private Medico medico; 
-    private Paciente paciente; 
-
+    int idCita;
+    int fecha;
+    Medico medico; 
+    Paciente paciente;
+    String Medico;
+    String Paciente;
+    
     public int getIdCita() {
         return idCita;
     }
@@ -23,7 +23,7 @@ public class Cita {
         return fecha;
     }
 
-    public void setFecha(int f) {
+    public void setFecha(int fecha) {
         this.fecha = fecha;
     }
 
@@ -43,3 +43,5 @@ public class Cita {
         this.paciente = paciente;
     }
 }
+
+

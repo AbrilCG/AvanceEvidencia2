@@ -2,43 +2,25 @@
  *@author LyrisseC
  */
 public class Medico {
-   private int idMedico;
-   private String nombre; 
-   private String apPaterno;
-   private String apMaterno;
-   private int edad;
-   private String sexo;
-   private int telefono;
-   private String calle;
-   private int numero; 
-   private String colonia;  
-   private String municipio;
-   private String ciudad; 
-   private int cp;
-   private int noCedula;
-   private String especialidad;
-   
-   public Medico(){
-       
-   }
-   
-   public Medico(int idMedico, String nombre, String apMaterno, String apPaterno, int edad, String sexo, int telefono, String calle, int numero, String colonia, String municipio, String ciudad, int cp, int noCedula, String especialidad){
-       this.idMedico=idMedico;
-       this.nombre=nombre;
-       this.apPaterno=apPaterno;
-       this.apMaterno=apMaterno;
-       this.edad=edad;
-       this.sexo=sexo;
-       this.telefono=telefono;
-       this.calle=calle;
-       this.numero=numero;
-       this.colonia=colonia;
-       this.municipio=municipio;
-       this.ciudad=ciudad;
-       this.cp=cp;
-       this.noCedula=noCedula;
-       this.especialidad=especialidad; 
-   }
+   int idMedico;
+   String nombre; 
+   String apPaterno;
+   String apMaterno;
+   int edad;
+   String sexo;
+   int telefono;
+   String calle;
+   int numero; 
+   String colonia;  
+   String municipio;
+   String ciudad; 
+   int cp;
+   int noCedula;
+   String especialidad;
+
+    Medico() {
+        
+    }
 
     public int getIdMedico() {
         return idMedico;

@@ -3,20 +3,20 @@
  * @author LyrisseC
  */
 public class Paciente {
-   private int idPaciente;
-   private String nombre; 
-   private String apPaterno;
-   private String apMaterno;
-   private int edad;
-   private String sexo;
-   private int telefono;
-   private String calle;
-   private int numero; 
-   private String colonia;  
-   private String municipio;
-   private String ciudad; 
-   private int cp;
-   private int servicioSocial; 
+   int idPaciente;
+   String nombre; 
+   String apPaterno;
+   String apMaterno;
+   int edad;
+   String sexo;
+   int telefono;
+   String calle;
+   int numero; 
+   String colonia;  
+   String municipio;
+   String ciudad; 
+   int cp;
+   int seguroSocial; 
 
     public int getIdPaciente() {
         return idPaciente;
@@ -123,13 +123,10 @@ public class Paciente {
     }
 
     public int getServicioSocial() {
-        return servicioSocial;
+        return seguroSocial;
     }
 
     public void setServicioSocial(int servicioSocial) {
-        this.servicioSocial = servicioSocial;
+        this.seguroSocial = servicioSocial;
     }
-   
-   
-    
 }

@@ -1,13 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 /**
  *
  * @author LyrisseC
  */
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-
 public class Main {
     public static List<Usuario> usuario; 
     public static void main(String[] args) {
@@ -46,75 +43,101 @@ public static boolean validarCredenciales(String us, String contraseña){
 
 public static void me(){
     Scanner sc = new Scanner(System.in);
-    int op;
+    int op = 0;
     System.out.println("Menu");
     System.out.println("Presiona 1 si quieres dar de alta a un Medico");
     System.out.println("Presiona 2 si quieres dar de alta a un Paciente");
-    System.out.println("Presiona 3 si quieres ver la citas por nombre del medico");
-    System.out.println("Presiona 4 si quieres ver las citas por nombre del paciente");
+    System.out.println("Presiona 3 si quieres creae una cita");
     System.out.println("Que quieres hacer??");
-
+    op = sc.nextInt();
+    switch (op){
+        case 1: 
                     System.out.println("Seleccionaste la opcion 1 - Dar de alta a un Medico");
                     Medico m = new Medico();
-                    m.setIdMedico(1);
-                    m.setNombre("Ytzel");
-                    m.setApPaterno("Cavazos");
-                    m.setApMaterno("Gonzalez");
-                    m.setEdad(18);
-                    m.setSexo("Femenino");
-                    m.setTelefono(811134556);
-                    m.setCalle("Pinguino");
-                    m.setNumero(234);
-                    m.setColonia("Cuauhtemoc");
-                    m.setMunicipio("San Nicolas");
-                    m.setCiudad("Nuevo Leon");
-                    m.setCp(11234);
-                    m.setNoCedula(34567);
-                    m.setEspecialidad("Cardiologa");
-                
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("Proporciona los siguientes datos");
+                    System.out.println("Id del Medico");
+                    m.idMedico = sc.nextInt();
+                    System.out.println("Nombre del Medico");
+                    m.nombre = sc.nextLine();
+                    System.out.println("Apellido Paterno del Medico");
+                    m.apPaterno = sc.nextLine();
+                    System.out.println("Apellido Materno del Medico");
+                    m.apMaterno = sc.nextLine();
+                    System.out.println("Edad Medico");
+                    m.edad = sc.nextInt();
+                    System.out.println("Sexo del Medico");
+                    m.sexo =sc.nextLine();
+                    System.out.println("Telefono del Medico");
+                    m.telefono = sc.nextInt();
+                    System.out.println("Numero del cedula");
+                    m.noCedula = sc.nextInt();
+                    System.out.println("Especialidad");
+                    m.especialidad = sc.nextLine();
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("Proporciona los siguientes datos del domicilio del Medico");
+                    System.out.println("Calle");
+                    m.calle = sc.nextLine();
+                    System.out.println("Numero de la casa");
+                    m.numero = sc.nextInt();
+                    System.out.println("Colonia");
+                    m.colonia = sc.nextLine();
+                    System.out.println("Municipio");
+                    m.municipio = sc.nextLine();
+                    System.out.println("Ciudad");
+                    m.ciudad = sc.nextLine();
+                    System.out.println("Codigo postal");
+                    m.cp = sc.nextInt();
+        break;
+        case 2:
                     System.out.println("Seleccionaste la opcion 2 - Dar de alta a un Paciente");
                     Paciente p = new Paciente();
-                    p.setIdPaciente(32);
-                    p.setNombre("Sofia");
-                    p.setApPaterno("Casarez");
-                    p.setApMaterno("Martinez");
-                    p.setEdad(30);
-                    p.setSexo("Femenino");
-                    p.setTelefono(811123456);
-                    p.setCalle("Madrid");
-                    p.setNumero(987);
-                    p.setColonia("Nogalar");
-                    p.setMunicipio("San Nicolas");
-                    p.setCiudad("Nuevo Leon");
-                    p.setCp(44556);
-                    p.setServicioSocial(2345678);         
-                   
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("Proporciona los siguientes datos");
+                    System.out.println("Id");
+                    p.idPaciente = sc.nextInt();
+                    System.out.println("Nombre del paciente");
+                    p.nombre = sc.nextLine();
+                    System.out.println("Apellido Paterno");
+                    p.apPaterno = sc.nextLine();
+                    System.out.println("Apellido Materno");
+                    p.apMaterno = sc.nextLine();
+                    System.out.println("Edad");
+                    p.edad = sc.nextInt();
+                    System.out.println("Sexo");
+                    p.sexo =sc.nextLine();
+                    System.out.println("Telefono");
+                    p.telefono = sc.nextInt();
+                    System.out.println("Seguro Social");
+                    p.seguroSocial = sc.nextInt();
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("Proporciona los siguientes datos del domicilio del Medico");
+                    System.out.println("Calle");
+                    p.calle = sc.nextLine();
+                    System.out.println("Numero de la casa");
+                    p.numero = sc.nextInt();
+                    System.out.println("Colonia");
+                    p.colonia = sc.nextLine();
+                    System.out.println("Municipio");
+                    p.municipio = sc.nextLine();
+                    System.out.println("Ciudad");
+                    p.ciudad = sc.nextLine();
+                    System.out.println("Codigo postal");
+                    p.cp = sc.nextInt();
+        break;      
+        case 3:             
                     System.out.println("Seleccionaste la opcion 3 - Crear una cita");
                     Cita c  = new Cita();
-                    c.setIdCita(89);
-                    c.setMedico(m);
-                    c.setPaciente(p);
-                    c.setFecha(05/12/2021);
-                    save(c);
+                    System.out.println("Id Cita");
+                    c.idCita = sc.nextInt();
+                    System.out.println("Fecha");
+                    c.fecha= sc.nextInt();
+                    System.out.println("Medico que atendera la cita");
+                    c.Medico = sc.nextLine();
+                    System.out.println("Paciente");
+                    c.Paciente = sc.nextLine();
+        break;
+}
+}
 }
 
-    public static void save(Cita c) {
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            String json = mapper.writeValueAsString(c);
-            System.out.println(json);
-        } catch (Exception e) {
-            System.out.println("Error->" + e.getMessage());
-        }
-    }
-    
-    public static void load() {
-        String json = "{\"id\":1,\"nombreCita\":\"Cita numero 1\",\"fecha\":\"05/12/2021\",\"medico\":{\"id\":1,\"nombre\":\"Ytzel\",\"especialidad\":\"Cardiologa\"},\"paciente\":{\"id\":89,\"nombre\":\"Maria\"}}";
-        System.out.println("load " + json);
-        Gson gson = new Gson();
-        Cita cita = gson.fromJson(json, Cita.class);
-
-        System.out.println("nombre del paciente:" + cita.getPaciente().getNombre());
-    }
-
-}
